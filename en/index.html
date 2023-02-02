@@ -11,22 +11,25 @@
     <link rel="icon" href="/pics/logo2.png" type="image/x-icon" />
   </head>
   <style>
-    body {
+    /*body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 14px;
       line-height: 1.428571429;
       color: #333333;
       background-color: #d7111b;
       margin-top: 1%;
-    }
-    
+    }*/
+
     a {
-      border-radius: 2em;
       background-color: #d7111b;
-      padding: 0.2em;
       color: #ffea5e;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .linkbutton {
+      padding: 0.2em;
+      border-radius: 2em;
     }
 
     a:hover,
@@ -53,7 +56,7 @@
       padding: 2em;
       margin-bottom: 1em;
 
-      border-radius: 2em;
+      border-radius: 1em;
 
       background-color: #d7111b;
     }
@@ -111,6 +114,65 @@
       text-decoration: underline;
       cursor: pointer;
     }
+
+    table {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+      text-align: center;
+    }
+    th {
+      border: 1px solid rgb(0, 0, 0);
+    }
+    td.category {
+      border: 1px solid rgb(0, 0, 0);
+      padding: 8px;
+      text-align: center;
+      /* background-color: lightgray; */
+      font-weight: bold;
+    }
+
+    td.static {
+      color: white;
+      text-shadow: -1px 1px 1px #000,
+				  1px 1px 1px #000,
+				 1px -1px 1px #000,
+				-1px -1px 1px #000;
+    }
+    td.dynamic {
+      /* color: white; */
+      text-shadow: -1px 1px 1px #fff,
+				  1px 1px 1px #fff,
+				 1px -1px 1px #fff,
+				-1px -1px 1px #fff;
+    }
+
+    td.category:hover {
+      background-color: lightblue;
+    }
+    #OPED {background-color: #ff8}
+    #OPES {background-color: #ff0}
+    #OPAD {background-color: #ddd}
+    #OPAS {background-color: #fff}
+
+
+    #OMED {background-color: #f88}
+    #OMES {background-color: #f00}
+    #OMAD {background-color: #f8f}
+    #OMAS {background-color: #f0f}
+
+
+    #IPED {background-color: #8f8}
+    #IPES {background-color: #0f0}
+    #IPAD {background-color: #8ff}
+    #IPAS {background-color: #0ff}
+
+
+    #IMED {background-color: #888}
+    #IMES {background-color: #000}
+    #IMAD {background-color: #88f}
+    #IMAS {background-color: #00f}
   </style>
   <body>
     <a href="/account/login/"><div id="login" class="button">Login</div></a>
@@ -143,30 +205,77 @@
       That's all for today. Now I go and get my sleep. All the best!:)<br /><br />
     </div>
     <div id="site">
-    <span style="color: #260000;"
-      >If you would want to write me suggestions, or you want to contribute,
-      please write to</span
-    >
-    <code><a href="mailto:info@wannagethelp.com">this email</a></code
-    >.<br />
-    <span style="color: #260000;"
-      >Also, the code of the website is open-source, you can find it
-    </span>
-    <code
-      ><a href="https://github.com/Benkex/wanna_get_help"
-        >by clicking here</a
-      ></code
-    >.
-  </div>
+      <span
+        style="
+          color: #260000;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        "
+      >
+        If you would want to contact me, please write to
+        <a class="linkbutton" href="mailto:info@wannagethelp.com">this email</a
+        >. <br />The code of the website is open-source. <br />If you spot an
+        issue, have suggestions / ideas, or want to contribute,
+        <a class="linkbutton" href="https://github.com/Benkex/wanna_get_help"
+          >click here
+        </a>
+        :)
+      </span>
+    </div>
+    <!-- Here I plan to add category-subpages
+    Makara & Karabenick
     <div class="flexbox">
-      <div class="button shadow">ABC</div>
-      <div class="button shadow">DEF</div>
+      <div class="button shadow">Mental</div>
+      <div class="button shadow">Physical</div>
       <div class="button shadow">GHI</div>
     </div>
     <div class="flexbox">
       <div class="button shadow">ABC</div>
       <div class="button shadow">DEF</div>
       <div class="button shadow">GHI</div>
-    </div>
+    </div-->
+    <table>
+      <tr>
+        <td colspan="2"></td>
+        <th colspan="2">Mediated</td>
+        <th colspan="2">Face-to-Face</td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <th>Dynamic</td>
+        <th>Static</td>
+        <th>Dynamic</td>
+        <th>Static</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Formal</td>
+        <th>Personal</td>
+        <td id="OPED" class="category dynamic">Virtual Support</td>
+        <td id="OPES" class="category static">Online Professional Help</td>
+        <td id="OPAD" class="category dynamic">In-Person Professional Support</td>
+        <td id="OPAS" class="category static">Private Professional Assistance</td>
+      </tr>
+      <tr>
+        <th>Impersonal</td>
+        <td id="OMED" class="category dynamic">Online Group Support</td>
+        <td id="OMES" class="category static">Online Self-Help Resources</td>
+        <td id="OMAD" class="category dynamic">Group Therapy</td>
+        <td id="OMAS" class="category static">Self-Help Materials</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Informal</td>
+        <th>Personal</td>
+        <td id="IPED" class="category dynamic">Remote Personal Support</td>
+        <td id="IPES" class="category static">Personal Communication</td>
+        <td id="IPAD" class="category dynamic">In-Person Personal Support</td>
+        <td id="IPAS" class="category static">Personal Reflection</td>
+      </tr>
+      <tr>
+        <th>Impersonal</td>
+        <td id="IMED" class="category dynamic">Online Community Support</td>
+        <td id="IMES" class="category static">Self-Help Media</td>
+        <td id="IMAD" class="category dynamic">In-Person Support Group</td>
+        <td id="IMAS" class="category static">Mindfulness Practices</td>
+      </tr>
+    </table>
   </body>
 </html>
