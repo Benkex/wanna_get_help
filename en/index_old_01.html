@@ -11,21 +11,25 @@
     <link rel="icon" href="/pics/logo2.png" type="image/x-icon" />
   </head>
   <style>
-    :root {
-      --shadow-blur: 5px;
-      --shadow-width: 2px;
-      --shadow-width-neg: -2px;
-    }
+    /*body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.428571429;
+      color: #333333;
+      background-color: #d7111b;
+      margin-top: 1%;
+    }*/
 
     a {
-      color: #de2100;
+      background-color: #d7111b;
+      color: #ffea5e;
       text-decoration: none;
       font-weight: bold;
     }
 
     .linkbutton {
       padding: 0.2em;
-      border-radius: 1em;
+      border-radius: 2em;
     }
 
     a:hover,
@@ -41,12 +45,20 @@
       outline-offset: -2px;
     }
 
-    .default-text, .block {
+    .default-text {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+
+      color: white;
     }
 
-    .centered {
-      text-align: center;
+    .well {
+      padding: 2em;
+      margin-bottom: 1em;
+
+      border-radius: 1em;
+
+      background-color: #d7111b;
     }
 
     .button {
@@ -75,6 +87,7 @@
       width: 90%;
       margin: 0 auto;
       padding: 20px;
+      text-align: left;
       border-radius: 1em;
       margin-top: 3em;
     }
@@ -116,113 +129,88 @@
       border: 1px solid rgb(0, 0, 0);
       padding: 8px;
       text-align: center;
+      /* background-color: lightgray; */
       font-weight: bold;
     }
 
     td.static {
       color: white;
-      text-shadow: -2px 2px 5px#000, 2px 2px 5px#000, 2px -2px 5px#000,
-        -2px -2px 5px#000;
+      text-shadow: -1px 1px 1px #000,
+				  1px 1px 1px #000,
+				 1px -1px 1px #000,
+				-1px -1px 1px #000;
     }
     td.dynamic {
-      text-shadow: var(--shadow-width-neg) var(--shadow-width)
-          var(--shadow-blur) #fff,
-        var(--shadow-width) var(--shadow-width) var(--shadow-blur) #fff,
-        var(--shadow-width) var(--shadow-width-neg) var(--shadow-blur) #fff,
-        var(--shadow-width-neg) var(--shadow-width-neg) var(--shadow-blur) #fff;
+      /* color: white; */
+      text-shadow: -1px 1px 1px #fff,
+				  1px 1px 1px #fff,
+				 1px -1px 1px #fff,
+				-1px -1px 1px #fff;
     }
 
     td.category:hover {
       background-color: lightblue;
     }
+    #OPED {background-color: #ff8}
+    #OPES {background-color: #ff0}
+    #OPAD {background-color: #ddd}
+    #OPAS {background-color: #fff}
 
-    .block {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-direction: column;
-      /* vertical-align: middle;
-      display: inline-block; */
 
-      text-align: center;
-      margin: 1%;
-      border-radius: 1em;
-      width: 100%;
-      padding: 1em;
-    }
-    div.light {
-      background-color: white;
-      border: 3px solid rgb(255, 110, 85);
-    }
+    #OMED {background-color: #f88}
+    #OMES {background-color: #f00}
+    #OMAD {background-color: #f8f}
+    #OMAS {background-color: #f0f}
 
-    div.filled {
-      background-color: rgb(251, 148, 130);
-    }
 
-    #OPED {background-color: #ff8;}
-    #OPES {background-color: #ff0;}
-    #OPAD {background-color: #ddd;}
-    #OPAS {background-color: #fff;}
+    #IPED {background-color: #8f8}
+    #IPES {background-color: #0f0}
+    #IPAD {background-color: #8ff}
+    #IPAS {background-color: #0ff}
 
-    #OMED {background-color: #f88;}
-    #OMES {background-color: #f00;}
-    #OMAD {background-color: #f8f;}
-    #OMAS {background-color: #f0f;}
 
-    #IPED {background-color: #8f8;}
-    #IPES {background-color: #0f0;}
-    #IPAD {background-color: #8ff;}
-    #IPAS {background-color: #0ff;}
-
-    #IMED {background-color: #888;}
-    #IMES {background-color: #000;}
-    #IMAD {background-color: #88f;}
-    #IMAS {background-color: #00f;}
+    #IMED {background-color: #888}
+    #IMES {background-color: #000}
+    #IMAD {background-color: #88f}
+    #IMAS {background-color: #00f}
   </style>
   <body>
-    <!-- <a href="/account/login/"><div id="login" class="button">Login</div></a> -->
-    <div id="site" class="default-text">
-      <h2 class="centered">Hello! </h2><br />
-      <div style="display: flex">
-        <div class="block light"><span>
-      Wanna get help? You'll have to wait, until this site gets ready, I'm
-      sorry... <br />
-      But until then:<br />
-      </span></div></div>
-      <div style="display: flex">
-        <div class="block light"><span>
-          <a href="https://youtube.com/c/3blue1brown">3Blue1Brown</a>
-          <br>this guy is a genius in explaining <br><b>math</b> and computer science.
-          <br>Check his <a href="https://youtube.com/c/3blue1brown">YouTube channel</a> out!
-        </span></div>
-        <div class="block light"><span>
-          Are you excited, which tool he uses?
-          <br><a href="https://youtu.be/d9nbtyO2YcU">Watch this video!</a><br />
-        </span></div>
-        <div class="block light"><span>
-          Do you want to start studying? <br><a href="https://www.bachelorsportal.com/">Bachelorsportal</a>'s got something for you!
-        </span></div>
+    <a href="/account/login/"><div id="login" class="button">Login</div></a>
+    <div id="site">
+      <div class="well default-text">
+        Hello! <br />
+        Wanna get help? You'll have to wait, until this site gets ready, I'm
+        sorry... <br />
+        But until then, here are a couple of good things:<br />
+        <a href="https://youtube.com/c/3blue1brown">3Blue1Brown</a> - this guy
+        is a genius in explaining <strong>math</strong> and other nerdy things.
+        Check his youtube channel out!<br />
+        Wanna know, which tool he uses?
+        <a href="https://youtu.be/d9nbtyO2YcU">Watch this video!</a>
       </div>
-    </div>
-    <div id="site" class="default-text centered">
-      <h2>On-coming:</h2>
-      <div style="display: flex">
-        <div class="block filled">
-            A <b>well-structured</b> reference guide.
-        </div>
-        <div class="block filled"><b> Links</b> to other useful websites.
-        </div>
-        <div class="block filled">
-            A <b>platform</b> to find people willing to help for free (there are dozens
-            of them, believe me, I am also one of them:) Of course if you are a
-            person like that, you will able to registrate!
-        </div>
-      </div>
+      What I actually plan for this website:
+      <ul>
+        <li>
+          It will be overpowered and you'll find everything what you need, but
+          in a <strong>very good structured</strong> manner.
+        </li>
+        <li>It will have links to other useful websites.</li>
+        <li>
+          It will have a platform on that you can find people willing to help
+          for free (there are dozens of them, believe me, <br />I am also one of
+          them:) - of course if you are a person like that, you will able to
+          registrate!
+        </li>
+      </ul>
       That's all for today. Now I go and get my sleep. All the best!:)<br /><br />
     </div>
     <div id="site">
       <span
-        class="default-text">
+        style="
+          color: #260000;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        "
+      >
         If you would want to contact me, please write to
         <a class="linkbutton" href="mailto:info@wannagethelp.com">this email</a
         >. <br />The code of the website is open-source. <br />If you spot an
@@ -233,48 +221,56 @@
         :)
       </span>
     </div>
+    <!-- Here I plan to add category-subpages
+    Makara & Karabenick
+    <div class="flexbox">
+      <div class="button shadow">Mental</div>
+      <div class="button shadow">Physical</div>
+      <div class="button shadow">GHI</div>
+    </div>
+    <div class="flexbox">
+      <div class="button shadow">ABC</div>
+      <div class="button shadow">DEF</div>
+      <div class="button shadow">GHI</div>
+    </div-->
     <table>
       <tr>
         <td colspan="2"></td>
-        <th colspan="2">Mediated</th>
-        <th colspan="2">Face-to-Face</th>
+        <th colspan="2">Mediated</td>
+        <th colspan="2">Face-to-Face</td>
       </tr>
       <tr>
         <td colspan="2"></td>
-        <th>Dynamic</th>
-        <th>Static</th>
-        <th>Dynamic</th>
-        <th>Static</th>
+        <th>Dynamic</td>
+        <th>Static</td>
+        <th>Dynamic</td>
+        <th>Static</td>
       </tr>
       <tr>
-        <th rowspan="2">Formal</th>
-        <th>Personal</th>
+        <th rowspan="2">Formal</td>
+        <th>Personal</td>
         <td id="OPED" class="category dynamic">Virtual Support</td>
         <td id="OPES" class="category static">Online Professional Help</td>
-        <td id="OPAD" class="category dynamic">
-          In-Person Professional Support
-        </td>
-        <td id="OPAS" class="category static">
-          Private Professional Assistance
-        </td>
+        <td id="OPAD" class="category dynamic">In-Person Professional Support</td>
+        <td id="OPAS" class="category static">Private Professional Assistance</td>
       </tr>
       <tr>
-        <th>Impersonal</th>
+        <th>Impersonal</td>
         <td id="OMED" class="category dynamic">Online Group Support</td>
         <td id="OMES" class="category static">Online Self-Help Resources</td>
         <td id="OMAD" class="category dynamic">Group Therapy</td>
         <td id="OMAS" class="category static">Self-Help Materials</td>
       </tr>
       <tr>
-        <th rowspan="2">Informal</th>
-        <th>Personal</th>
+        <th rowspan="2">Informal</td>
+        <th>Personal</td>
         <td id="IPED" class="category dynamic">Remote Personal Support</td>
         <td id="IPES" class="category static">Personal Communication</td>
         <td id="IPAD" class="category dynamic">In-Person Personal Support</td>
         <td id="IPAS" class="category static">Personal Reflection</td>
       </tr>
       <tr>
-        <th>Impersonal</th>
+        <th>Impersonal</td>
         <td id="IMED" class="category dynamic">Online Community Support</td>
         <td id="IMES" class="category static">Self-Help Media</td>
         <td id="IMAD" class="category dynamic">In-Person Support Group</td>
