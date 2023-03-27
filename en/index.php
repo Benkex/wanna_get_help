@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <?php
+    $page_name = "Wanna get help!";
+  ?>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="cache-control" content="max-age=0" />
@@ -7,7 +10,7 @@
     <!-- <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" /> -->
     <meta http-equiv="pragma" content="no-cache" />
-    <title>Wanna get help!</title>
+    <title><?php echo $page_name; ?></title>
     <link rel="icon" href="/pics/logo2.png" type="image/x-icon" />
   </head>
   <style>
@@ -136,20 +139,49 @@
       background-color: lightblue;
     }
 
+    div {
+      font-size: 16px;
+    }
+
+    /* .visibledevice {display:none;}
+    .visibledesktop {display:display;} */
+
+    @media (max-width : 400px) {
+        div {font-size: 1vh;}
+        /* .visibledevice {display:block;}
+        .visibledesktop {display:none;} */
+    }
+
+    .parent {
+      display: flex;
+      flex-direction: row;
+      /* align-items: center; */
+      /* align-content: center; */
+      justify-content: center;
+      flex-wrap: wrap;
+
+      text-align: center;
+      margin: 1%;
+      border-radius: 1em;
+      padding: 1em;
+    }
+
     .block {
       display: flex;
       justify-content: center;
       align-content: center;
       flex-direction: column;
+      
       /* vertical-align: middle;
       display: inline-block; */
 
       text-align: center;
       margin: 1%;
       border-radius: 1em;
-      width: 100%;
+      width: 20em;
       padding: 1em;
     }
+
     div.light {
       background-color: white;
       border: 3px solid rgb(255, 110, 85);
@@ -183,13 +215,12 @@
     <!-- <a href="/account/login/"><div id="login" class="button">Login</div></a> -->
     <div id="site" class="default-text">
       <h2 class="centered">Hello! </h2><br />
-      <div style="display: flex">
-        <div class="block light"><span>
+        <div class="parent light"><span>
       Wanna get help? You'll have to wait, until this site gets ready, I'm
       sorry... <br />
       But until then:<br />
-      </span></div></div>
-      <div style="display: flex">
+      </span></div>
+      <div class="parent">
         <div class="block light"><span>
           <a href="https://youtube.com/c/3blue1brown">3Blue1Brown</a>
           <br>this guy is a genius in explaining <br><b>math</b> and computer science.
@@ -206,7 +237,7 @@
     </div>
     <div id="site" class="default-text centered">
       <h2>On-coming:</h2>
-      <div style="display: flex">
+      <div class="parent">
         <div class="block filled">
             A <b>well-structured</b> reference guide.
         </div>
@@ -281,5 +312,35 @@
         <td id="IMAS" class="category static">Mindfulness Practices</td>
       </tr>
     </table>
+
+    <?php
+      session_start();
+      $counter_name = "counter.txt";
+
+      // Check if a text file exists.
+      // If not create one and initialize it to zero.
+      if (!file_exists($counter_name)) {
+        $f = fopen($counter_name, "w");
+        fwrite($f,"0");
+        fclose($f);
+      }
+
+      // Read the current value of our counter file
+      $f = fopen($counter_name,"r");
+      $counterVal = fread($f, filesize($counter_name));
+      fclose($f);
+
+      // Has visitor been counted in this session?
+      // If not, increase counter value by one
+      if(!isset($_SESSION['hasVisited'])){
+        $_SESSION['hasVisited']="yes";
+        $counterVal++;
+        $f = fopen($counter_name, "w");
+        fwrite($f, $counterVal);
+        fclose($f);
+      }
+
+      echo "You are visitor number $counterVal to this site";
+    ?>
   </body>
 </html>

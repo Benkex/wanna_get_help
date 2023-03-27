@@ -1,2 +1,2 @@
 # wanna_get_help
-Source code of http://wannagethelp.com
+Source code of http://www.wannagethelp.com/en/
